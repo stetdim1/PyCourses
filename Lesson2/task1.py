@@ -6,7 +6,7 @@ print('start program')
 # print(s)
 # f.close()
 
-with open('test1.txt', 'r+', encoding='utf-8') as file:
+with open('test1.txt', 'r') as file:
     while True:
         #s = file.readline()
         s = file.read()
@@ -15,8 +15,11 @@ with open('test1.txt', 'r+', encoding='utf-8') as file:
             sn = re.sub(r' ', r'', s)
             print(sn)
         else:
-            print('Break')
-            file.close() #not nesessery with 'with'
             break
+
+with open('test1.txt', 'w') as file:
+    # file.writelines(sn)
+    file.write(sn)
+
 
 
