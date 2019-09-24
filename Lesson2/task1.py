@@ -9,6 +9,7 @@ print('start program')
 with open('test1.txt', 'r') as file:
     while True:
         #s = file.readline()
+
         s = file.read()
         if s != "":
             print(s)
