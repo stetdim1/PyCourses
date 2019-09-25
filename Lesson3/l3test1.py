@@ -83,8 +83,7 @@ if __name__ == '__main__':
             finalDict[s] = finalDict[s] + 1
         else:
             finalDict[s] = 1
-    # finalDict = sorted(finalDict.items())
-    # sorted_dict = collections.OrderedDict(finalDict)
+
     sorted_dict = sorted(finalDict.items(), key=lambda kv: kv[1])
     sorted_dict.reverse()
     print(sorted_dict)
