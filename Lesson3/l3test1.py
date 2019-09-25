@@ -86,10 +86,9 @@ if __name__ == '__main__':
 
     sorted_dict = sorted(finalDict.items(), key=lambda kv: kv[1])
     sorted_dict.reverse()
-    print(sorted_dict)
+    # print(sorted_dict)
     for k, v in sorted_dict:
         print(f'слово {k} встретилось {v} раз')
-
 
 
 
