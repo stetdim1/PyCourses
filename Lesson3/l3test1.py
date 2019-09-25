@@ -57,14 +57,15 @@ def mainParser():
         textTen = parseHTMLSecond(textTen, '(')
         textTen = parseHTMLSecond(textTen, ')')
         textTen = parseHTMLSecond(textTen, '*')
-        # textTen = parseHTMLSecond(textTen, '-')
         textTen = parseHTMLSecond(textTen, '_')
         textTen = parseHTMLSecond(textTen, '\n')
         textTen = parseHTMLSecond(textTen, '“')
         textTen = parseHTMLSecond(textTen, '”')
         textTen = parseHTMLSecond(textTen, '—')
-        # textTen = parseHTMLSecond(textTen, 'ing')
-        #         # textTen = parseHTMLSecond(textTen, 'ed')
+        textTen = parseHTMLSecond(textTen, 'ting')
+        textTen = parseHTMLSecond(textTen, 'ning')
+        textTen = parseHTMLSecond(textTen, 'ing')
+        textTen = parseHTMLSecond(textTen, 'ed')
         return textTen
     except requests.exceptions.ReadTimeout:
         print('Oops. Read timeout occured')
@@ -73,7 +74,7 @@ def mainParser():
 
 if __name__ == '__main__':
     richText = mainParser()
-    richText= richText.split(' ')
+    richText = richText.split(' ')
     # print(richText)
     finalDict = {}
 
